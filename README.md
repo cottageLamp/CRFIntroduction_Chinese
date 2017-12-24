@@ -1,3 +1,4 @@
-# My Awesome Book
+# 条件随机场介绍
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+译自“An Introduction to Conditional Random Fields" --Charles Sutton, Andrew McCallum。由于我也在学习过程中，因此会有不少错漏之处。也希望能依靠大家的力量，共同进步。
+
