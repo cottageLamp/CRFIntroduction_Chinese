@@ -10,7 +10,8 @@
 	"direction":"ltr",
 	
 	"plugins": [
-		"katex",
-		"ace"
+		"katex",	
+		"ace",
+		"mathjax"
 	]
 }
