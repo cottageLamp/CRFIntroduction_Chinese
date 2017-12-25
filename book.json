@@ -1,3 +1,16 @@
 {
-    "plugins": ["katex"]
+    "title": "《An Introduction to Conditional Random Fields -- Charles Sutton and Andrew McCallum》中文版",
+	
+	"author" : "蒙诚哲 chengzhe meng",
+	
+    "description":"作为对《An Introduction to Conditional Random Fields》英文版的中文翻译。",
+	
+	"language":"zh-hans",
+	
+	"direction":"ltr",
+	
+	"plugins": [
+		"katex",
+		"ace"
+	]
 }
