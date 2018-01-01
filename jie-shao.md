@@ -1,4 +1,5 @@
-#1.介绍
+# 1介绍
+
 对很多应用来说，至关重要的是预测互相关多变量的能力。这些应用广泛分布于图片分割及分类、围棋胜负概率的预测、在DNA序列中分离基因组，以及对自然文本进行语法分割。在这些应用中，我们想基于一组观测值$$\pmb{x}$$，来预测一个随机输出向量$$\pmb y={y_0,y_1,...,y_T}$$。一个相对简单的例子是对自然语言进行词性标注。其中，每个$$y_s$$对应着s位置的单词的词性，而输入$$\pmb x$$被分解成多个输入特征向量$$\{\pmb x_0,\pmb x_1,...,\pmb x_T\}$$。每个$$\pmb x_s$$ 包含着s位置单词的多种信息，如它自身、它的前后缀、它在词典中的身份，以及来自语义数据库的信息（如WordNet）。（专业词汇有问题）
 
 一种办法是为每个位置s训练位置无关的分类器$$\pmb x \to y_s$$，尤其是当我们要最大化$$y_s$$的正确率时。然而，困难在于输入变量$$y_s$$之间存在复杂的依赖性。如在英语中，形容词不常接名词。又如在计算机视觉中，临近区域趋向属于相近的类。另一个难点在于，输出变量常常表现出一种复杂的结构，如语法树。那么，在树的顶端附近选择怎样的语法规则会对整个树有极大的影响。（译注：$$\pmb x \to y_s$$表示每个$$y_s,s\in\{1,...,T\}$$独自有一个分类器，而每个把全部x作为输入。上一段还提到对x进行分解，这里却突然合并了。）
@@ -21,11 +22,12 @@
 
 因为这是我们关于实现细节的第一个章节，应该提一提可供使用的一些CRFs平台。在写作本文时，一些流行的平台包括：
 
-| CRF++| http://crfpp.sourceforge.net/ |
+| CRF++ | [http://crfpp.sourceforge.net/](http://crfpp.sourceforge.net/) |
 | :--- | :--- |
-| MALLET|http://mallet.cs.umass.edu/ |
-| GRMM | http://mallet.cs.umass.edu/grmm/|
-|CRFSuite | http://www.chokkan.org/software/crfs |
-|FACTORIE | http://www/factorie.cc |
+| MALLET | [http://mallet.cs.umass.edu/](http://mallet.cs.umass.edu/) |
+| GRMM | [http://mallet.cs.umass.edu/grmm/](http://mallet.cs.umass.edu/grmm/) |
+| CRFSuite | [http://www.chokkan.org/software/crfs](http://www.chokkan.org/software/crfs) |
+| FACTORIE | [http://www/factorie.cc](http://www/factorie.cc) |
 
-除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：http://alchemy.cs.washington.edu/)也可用于构建CRF模型。 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
+除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：[http://alchemy.cs.washington.edu/\)也可用于构建CRF模型。](http://alchemy.cs.washington.edu/%29也可用于构建CRF模型。) 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
+
