@@ -9,5 +9,5 @@
 	
 	"direction":"ltr",
 	
-	"plugins": "mathjax",
+	"plugins": ["mathjax"]
 }
