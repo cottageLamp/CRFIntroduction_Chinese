@@ -9,7 +9,5 @@
 	
 	"direction":"ltr",
 	
-	"plugins": [
-		"katex"
-	]
+	"plugins": ["mathjax"]
 }
