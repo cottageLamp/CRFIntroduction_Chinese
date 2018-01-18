@@ -3,13 +3,16 @@
 * [前言](README.md)
 * [摘要](zhai-yao.md)
 * [介绍](jie-shao.md)
-* [建模](jian-mo.md)
+* [建模](jian-mo.md) 
+
 
 # 前言
 
 译自“An Introduction to Conditional Random Fields" --Charles Sutton, Andrew McCallum。我也在学习之中，必有错漏之处，希望能依靠大家的力量，共同进步。
 
-目前数学公式显示总出问题。可以到github上下载pdf文件：https://github.com/cottageLamp/CRFIntroduction\_Chinese
+目前数学公式显示总出问题。可以到github上下载pdf文件：
+
+https://github.com/cottageLamp/CRFIntroduction_Chinese。不过最好是把all.md文件下载下来，在本地的markdown编辑器上看。
 
 总体感觉原文并不是很好理解，翻译之后也不好理解。争取在翻译完成后，写一篇条理清晰的总结在后面。
 
@@ -41,14 +44,14 @@
 
 因为这是我们关于实现细节的第一个章节，应该提一提可供使用的一些CRFs平台。在写作本文时，一些流行的平台包括：
 
-| CRF++ | [http://crfpp.sourceforge.net/](http://crfpp.sourceforge.net/) |
-| :--- | :--- |
-| MALLET | [http://mallet.cs.umass.edu/](http://mallet.cs.umass.edu/) |
-| GRMM | [http://mallet.cs.umass.edu/grmm/](http://mallet.cs.umass.edu/grmm/) |
+| CRF++    | [http://crfpp.sourceforge.net/](http://crfpp.sourceforge.net/) |
+| :------- | :--------------------------------------- |
+| MALLET   | [http://mallet.cs.umass.edu/](http://mallet.cs.umass.edu/) |
+| GRMM     | [http://mallet.cs.umass.edu/grmm/](http://mallet.cs.umass.edu/grmm/) |
 | CRFSuite | [http://www.chokkan.org/software/crfs](http://www.chokkan.org/software/crfs) |
 | FACTORIE | [http://www/factorie.cc](http://www/factorie.cc) |
 
-除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：[http://alchemy.cs.washington.edu/\)也可用于构建CRF模型。](http://alchemy.cs.washington.edu/%29也可用于构建CRF模型。) 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
+除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：[http://alchemy.cs.washington.edu/]\)也可用于构建CRF模型。 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
 
 # 2 建模
 
