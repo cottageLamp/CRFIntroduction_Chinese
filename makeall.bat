@@ -1,1 +1,1 @@
-type SUMMARY.md + README.md + zhai-yao.md + jie-shao.md + jian-mo.md>>all.md
+type README.md + zhai-yao.md + jie-shao.md + jian-mo.md >> all.md
