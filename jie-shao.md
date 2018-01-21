@@ -29,5 +29,5 @@
 | CRFSuite | [http://www.chokkan.org/software/crfs](http://www.chokkan.org/software/crfs) |
 | FACTORIE | [http://www/factorie.cc](http://www/factorie.cc) |
 
-除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：[http://alchemy.cs.washington.edu/]\)也可用于构建CRF模型。 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
+除此之外，用于马尔科夫逻辑网络的软件（如Alchemy：http://alchemy.cs.washington.edu/)也可用于构建CRF模型。 据我们所知，Alchemy, GRMM 和 FACTORIE 是仅有的、能够处理任意的图模型的工具。
 
