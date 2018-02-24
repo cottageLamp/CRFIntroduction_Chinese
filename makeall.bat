@@ -1,1 +1,1 @@
-type README.md + zhai-yao.md + jie-shao.md + jian-mo.md + suan-fa-zong-lan.md + tui-duan.md>> all.md
+type README.md + zhai-yao.md + jie-shao.md + jian-mo.md + suan-fa-zong-lan.md + tui-duan.md + can-shu-gu-ji.md>> all.md

@@ -4,5 +4,7 @@
 * [摘要](zhai-yao.md)
 * [介绍](jie-shao.md)
 * [算法总览](suan-fa-zong-lan.md)
+* [推断](推断.md)
+* [参数估计](can-shu-gu-ji.md)
 
 
