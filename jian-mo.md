@@ -314,24 +314,32 @@ $$
 另外，许多应用模型常常需要参数绑定。以线性链为例，每一时刻的因子$$\Psi_t(y_t,y_{t-1},{x}_t)$$常常使用相同的权重。为了表示这一情况，我们把G的因子划分成$$\mathcal{C}=\{C_1,C_2,\cdots,C_P\}$$，其中每个$$C_P$$是一个**团模板clique template**，是一组共享了特征函数$$\{f_{pk}(x_c,y_c)\}^{K(p)}_{k=1}$$和参数$$\theta_p\in \mathcal{R}^{K(p)}$$的因子。一个使用了团模板的CRF可以写成
 
 $$
-p({y|x})=\frac{1}{Z({x})}\prod_{C_p\in\mathcal{C}}\prod_{\Psi_c\in C_p}\Psi_c({x}_c,{y}_c;\theta_p) (2.27)
+p(y|x)=\frac{1}{Z(x)}\prod_{C_p\in\mathcal{C}}\prod_{\Psi_c\in C_p}\Psi_c(x_c,y_c;\theta_p) (2.27)
 $$
 
 其中每个模板因子是这样参数化的
 
 $$
-\Psi_c({x}_c,{y}_c;\theta_p)=exp\left\{\sum^{K(p)}_{k=1}\theta_{pk}f_{pk}({x}_c,{y}_c\right\} (2.26)
+\Psi_c(x_c,y_c;\theta_p)=exp\left\{\sum^{K(p)}_{k=1}\theta_{pk}f_{pk}(x_c,y_c\right\} (2.26)
 $$
 
 而归一化函数为
 
 $$
-Z({x})=\sum_{y}\prod_{C_p\in\mathcal{C}}\prod_{\Psi_c\in C_p}\Psi_c( x_c,{y}_c). (2.27)
+Z(x)=\sum_y\prod_{C_p\in\mathcal{C}}\prod_{\Psi_c\in C_p}\Psi_c(x_c,y_c). (2.27)
 $$
 
+这一团模板的记号方法即指明了结构重复，也指明了参数绑定。以线性链CRF为例，典型的团模板$$C_0=\{\Psi_t(y_t,y_{t-1},{x}_t)\}^T_{t=1}$$倍整个网络使用，因而$$\mathcal{C}=\{C_0\}$$是元素单一的集合。如果相反地，我们希望给每个因子$$\Psi_t$$分配独立的参数，就像非齐次HMM，那么需要T个模板，即$$\mathcal{C}=\{C_t\}^T_{t=1}, C_t=\{\Psi_t(y_t,y_{t-1},{x}_t)\}$$。
 
+定义通用CRF时，如何给出重复的结构以及参数绑定，是属于最需要考虑的问题。人们推荐了一系列的规范，用于指定团模板，而我们仅仅在这里简单的罗列一下。例如，**动态条件随机场dynamic conditional random field**[140]是一些序列模型，允许在每个时刻拥有多个标签<font color=red>译注：不是指有多个类别，而是有多个变量</font>，而不只是单一的标签，很像动态贝叶斯网络。第二，**关系马尔科夫网relational Markov networks**【142】，是一种用类SQL的语法来指明图结构和参数绑定的通用CRF。**马尔科夫逻辑网Markov logic networks**【113,128】用逻辑式子(logic formulae)来给出无向图的局部函数的分数。实质上，知识库中的每条一阶规则都存在一组参数。MLN的逻辑部分，本质上，可以被看成一种编码惯例，用来指明无向图中的重复结构以及参数绑定。Imperatively define factor graphs【87】使用了完整表达的Turing-complete函数来定义团模板，即给出了模型的结构，也给出了充分统计量$$f_{pk}$$。这些函数灵活地采用了先进的编程思想，包括递归、任意搜索(arbitrary search)、惰性计算以及记忆化。本文采用的团模板的记号，来自于Taskar et al.[142]， Sutton et al. [140]，Richardson 和 Domingos [113]，以及McCallum et al.[87]
 
+##2.5特征工程
 
+<font color=red>不知道怎么翻译这里的专业名词</font>
+
+这一节，我们讲述一些特征工程中的技巧。虽然主要用于语言处理，它们还是很通用的。最主要的权衡很典型——大的特征集可以提高预测的精度，因为决策便捷更加灵活，但却需要更大的内存来保存参数，且可能因为过拟合而降低预测精度。
+
+**标签-观测特征?Label-observation features**.首先，当标签是离散变量，那么团模板$$\mathcal{C}_p$$的特征$$f_{pk}$$常常采用如下的特定形式：
 
 
 
