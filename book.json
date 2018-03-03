@@ -9,5 +9,9 @@
 	
 	"direction":"ltr",
 	
-	"plugins": ["mathjax"]
+	"plugins": [
+		"katex",
+		"ace"
+	]
+	
 }
