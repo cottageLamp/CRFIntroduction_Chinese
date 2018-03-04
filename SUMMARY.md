@@ -17,6 +17,11 @@
   * [线性链CRFs](tui-duan-1.md)
   * [图模型的推断](tui-duan-2.md)
   * [实现方面的注意点](tui-duan-3.md)
-* [参数估计](can-shu-gu-ji.md)
+* [参数估计](can-shu-gu-ji-0.md)
+  * [极大似然](can-shu-gu-ji-1.md)
+  * [随机梯度方法](can-shu-gu-ji-2.md)
+  * [并行](can-shu-gu-ji-3.md)
+  * [近似训练](can-shu-gu-ji-4.md)
+  * [Implementation Concerns](can-shu-gu-ji-5.md)
 
 
