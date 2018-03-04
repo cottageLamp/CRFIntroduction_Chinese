@@ -7,7 +7,7 @@
 为了简化符号，我们只给出线性链的SGD。然而，它可以很容易用于任意的图结构——只要训练数据是iid 的。单个训练样本$$(x^{(i)}, y^{(i)})$$的似然的梯度为：
 
 $$
-\frac{\partial \ell_i}{\partial\theta_k}=\sum^T_{t=1}f_k(y^{(i)}_t,y^{(i)}_{t-1}, x^{(i)}_t)-\sum^T_{t=1}\sum_{{y,y'}}f_k(y,y', x^{(i)}_t)p(y,y'| x^{(i)})-\frac{\theta_k}{N\sigma^2} (5.20)
+\frac{\partial \ell_i}{\partial\theta_k}=
 $$
 
 这与完整的梯度（5.6）一样，只是有两点不同：遍历所有样本的求和被去掉了，以及在规则化项中多出来的因子$$1/N$$。这保证整批的梯度等于单样本梯度的和，即$$\bigtriangledown\ell=\sum^N_{i=1}\bigtriangledown\ell_i$$，其中我们用$$\bigtriangledown\ell_i$$来表示单个样本$$i$$的梯度。
