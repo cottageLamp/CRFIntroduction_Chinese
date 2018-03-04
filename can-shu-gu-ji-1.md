@@ -129,7 +129,7 @@ $$
 这里，我们对$$\log f$$使用了链式法则，并对公式做了调整。将这一点应用到边缘似然$$\ell(\theta)=\log\sum_wp(y,w|x)$$得到
 
 $$
-\frac{\partial \ell}{\partial \theta_{pk}}=&\frac{1}{\sum_{ w}p({y,w|x})}\sum_{ w}\frac{\partial}{\partial\theta_{pk}}[p({y,w|x})] (5.16)
+\frac{\partial \ell}{\partial \theta_{pk}}=\frac{1}{\sum_{ w}p({y,w|x})}\sum_{ w}\frac{\partial}{\partial\theta_{pk}}[p({y,w|x})] (5.16)
 $$
 
 $$
