@@ -54,14 +54,11 @@ $$
 后向递归于此相同，除了在(4.3)中把求和的顺序颠倒过来。所得的定义为
 
 $$
-\begin{align}
 \beta_t(i)&\stackrel{def}{=}p(x_{<t+1\cdots T>}|y_t=i)
-\end{align}
 $$
+
 $$
-\begin{align}
 =\sum_{{y}_{<t+1\cdots T>}}\prod^T_{t'=t+1}\Psi_{t'}(y_{t'},y_{t'-1},x_{t'}) (4.8)
-\end{align}
 $$
 
 而其递归为
@@ -81,6 +78,7 @@ $$
 $$
 =\frac{p(x_{<1\cdots t-1>},y_{t-1})p(y_t|y_{t-1})p(x_t|y_t)p(x_{<t+1\cdots T}|y_t)}{p(x)}
 $$
+
 $$
 =\frac{1}{p(x)}\alpha_{t-1}\Psi_t(y_t,y_{t-1},x_t)\beta_t(y_t),(4.12)
 $$
