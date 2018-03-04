@@ -11,7 +11,7 @@ $$
 现在我们来研究HMM的前向算法，这是用来计算观测值的概率p(x)的。前向后向算法背后的思想是，首先把$$p(x)=\sum_yp(x,y)$$的求和运算，按照如下的方式重写
 
 $$
-p(x)=&\sum_y\prod^T_{t=1}\Psi_t(y_t,y_{t-1},x_t)
+p(x)=\sum_y\prod^T_{t=1}\Psi_t(y_t,y_{t-1},x_t)
 $$
 
 $$
@@ -23,7 +23,7 @@ $$
 这导致了所谓的前向变量$$\alpha_t$$，是大小为M的向量(M是状态的数量)，用来保存求和的中间结果。其定义为：
 
 $$
-\alpha_t(j)&\stackrel{def}{=}p(x_{<1\cdots t>},y_t=j)
+\alpha_t(j)\stackrel{def}{=}p(x_{<1\cdots t>},y_t=j)
 $$
 
 $$
@@ -41,7 +41,7 @@ $$
 后向递归于此相同，除了在(4.3)中把求和的顺序颠倒过来。所得的定义为
 
 $$
-\beta_t(i)&\stackrel{def}{=}p(x_{<t+1\cdots T>}|y_t=i)
+\beta_t(i)\stackrel{def}{=}p(x_{<t+1\cdots T>}|y_t=i)
 $$
 
 $$
