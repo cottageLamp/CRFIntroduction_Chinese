@@ -15,8 +15,8 @@
 * [算法总览](suan-fa-zong-lan.md)
 * [推断](tui-duan-0.md)
   * [线性链CRFs](tui-duan-1.md)
-  * [线性链CRFs](tui-duan-2.md)
-  * [线性链CRFs](tui-duan-3.md)
+  * [图模型的推断](tui-duan-2.md)
+  * [实现方面的注意点](tui-duan-3.md)
 * [参数估计](can-shu-gu-ji.md)
 
 
