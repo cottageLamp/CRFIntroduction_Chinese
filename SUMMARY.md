@@ -13,7 +13,10 @@
   * [CRFs的应用](jian-mo-7.md)
   * [关于术语的说明](jian-mo-8.md)
 * [算法总览](suan-fa-zong-lan.md)
-* [推断](tui-duan.md)
+* [推断](tui-duan-0.md)
+  * [线性链CRFs](tui-duan-1.md)
+  * [线性链CRFs](tui-duan-2.md)
+  * [线性链CRFs](tui-duan-3.md)
 * [参数估计](can-shu-gu-ji.md)
 
 
